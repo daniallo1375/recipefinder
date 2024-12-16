@@ -31,12 +31,25 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it a circle */
     border: none;
-    background: transparent;
-    font-size: 24px;
-    color: #ff7f50;
+    background: #ff7f50; /* Orange background */
+    font-size: 30px; /* Adjusted font size for the cross */
+    color: white;
+    text-align: center;
+    line-height: 40px; /* Centers the 'x' vertically */
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .close-button:hover {
+    background: linear-gradient(90deg, #691a13, #491d23); /* Hover effect */
+  }
+  
   
   .modal-image {
     width: 100%;
@@ -45,28 +58,28 @@
   }
   
   .modal-title {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #ff6f61;
   }
   
   .modal-cooking-time {
-    font-size: 16px;
+    font-size: 20px;
     color: #666;
   }
   
   .modal-section {
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: left;
   }
   
   .modal-section h3 {
-    font-size: 18px;
+    font-size: 25px;
     color: #333;
   }
   
   .modal-section p {
-    font-size: 14px;
+    font-size: 20px;
     color: #555;
   }
   

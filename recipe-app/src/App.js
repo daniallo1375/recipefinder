@@ -9,6 +9,7 @@ function App() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [query, setQuery] = useState("");
 
+  
   // Filter recipes based on the search query
   const filteredRecipes = sampleRecipes.filter((recipe) =>
     recipe.name.toLowerCase().includes(query.toLowerCase())
@@ -36,7 +37,8 @@ function App() {
         isLoading={false}
       />
       <div className="container">
-        <h2>Our Food Recipes</h2>
+        <h2>Food Recipes</h2>
+      
         <div className="recipes">
           {filteredRecipes.length > 0 ? (
             filteredRecipes.map((recipe) => (

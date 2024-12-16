@@ -6,7 +6,7 @@ const Navbar = ({ handleSubmit, query, isLoading, setQuery }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="/">🍴 Food Recipes</a>
+        <a href="/">🍴 Danial's Recipe Finder </a>
       </div>
       <div className="navbar-search">
         <SearchBar
