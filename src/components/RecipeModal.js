@@ -12,7 +12,7 @@ const RecipeModal = ({ recipe, onClose }) => {
         </button>
         <img src={image} alt={name} className="modal-image" />
         <h2 className="modal-title">{name}</h2>
-        <p className="modal-cooking-time">⏱️Cooking Time: {cooking_time} mins</p>
+        <p className="modal-cooking-time">⏱️Cooking Time: <strong>{cooking_time} mins</strong></p>
         <div className="modal-section">
           <h3>Ingredients</h3>
           <p>{ingredients.join(", ")}</p>

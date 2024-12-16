@@ -1,54 +1,114 @@
+/* Recipes Container */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic grid */
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Center the cards on larger screens */
+  justify-content: center; /* Center cards when fewer results are shown */
+
+}
+
+/* Card Styling */
 .card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    padding: 10px;
-  }
-  
-  .card-title {
-    font-size: 25px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  width: 280px; /* Fixed width for consistency */
+  min-height: 400px; /* Fixed height for uniform size */
+  display: flex;
+  flex-direction: column; /* Ensure content stacks properly */
+  justify-content: space-between; /* Distribute content evenly */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Uniform height for images */
+  object-fit: cover; /* Ensure the image fills the space nicely */
+}
+
+.card-body {
+  padding: 15px;
+  flex-grow: 1; /* Ensure content stretches to fill the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 18px; /* Standard font size for PC */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-cooking-time {
+  font-size: 14px; /* Smaller font size for details */
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.view-button {
+  background: linear-gradient(90deg, #ff7f50, #ff6f61);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 14px; /* Smaller font size for the button */
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.view-button:hover {
+  background: linear-gradient(90deg, #691a13, #491d23);
+}
+
+/* Responsive Adjustments for Cards */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Let cards take 90% width for tablets */
+    min-height: 380px; /* Slightly smaller height */
   }
 
-  .card-cooking-time {
-    font-size: 17px;
-    color: #666;
+  .card-image {
+    height: 180px; /* Adjust height for tablets */
   }
-  
+
+  .card-title {
+    font-size: 16px; /* Reduce title size for tablets */
+  }
+
   .view-button {
-    background: linear-gradient(90deg, #ff7f50, #ff6f61);
-    color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 10px 25px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 12px; /* Reduce button size */
+    padding: 8px 15px;
   }
-  
-  .view-button:hover {
-    background: linear-gradient(90deg, #691a13, #491d23);
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-height: 360px; /* Smaller fixed height for phones */
   }
-  
+
+  .card-image {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .card-title {
+    font-size: 14px; /* Further reduce title size for phones */
+  }
+
+  .view-button {
+    font-size: 12px; /* Smaller button font for phones */
+    padding: 6px 12px;
+  }
+}
